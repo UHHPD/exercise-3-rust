@@ -30,10 +30,10 @@ int main() {
     for(int k = 0 ; k <= 10 ; ++k) {
         output_file_variance << k << " " << data[k] << std::endl;
     }
-    std::vector<int> possion_list(11);
+    std::vector<double> possion_list(11);
     double mu = 3.11538;
     for(int k = 0 ; k <= 10 ; ++k) {
-        possion_list[k] = static_cast<int>(poisson(mu, k) * 234);
+        possion_list[k] = static_cast<double>(poisson(mu, k) * 234);
     }
     std::ofstream output_file_poisson("histpoi.txt");
     if (!output_file_poisson.is_open()) {
